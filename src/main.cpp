@@ -61,6 +61,7 @@ String modelist(){
 
 void motor_test(){
   DRV8835 left(4,16);
+  DRV8835 right(17,18);
   while (true)
   {
     String str;
@@ -70,6 +71,6 @@ void motor_test(){
     str.setCharAt(str.length()-1,0);
     if (str.equals("end")) break;
     left.setDuty(str.toDouble());
+    right.setDuty(str.toDouble());
   }
-  
 }
